@@ -1,4 +1,4 @@
-import type { IChildren } from '../../../shared/typings/global'
+import type { IChildren } from '../../../shared/types/global'
 import { PaginationProvider } from './Pagination/context'
 
 export function Providers({ children }: IChildren) {

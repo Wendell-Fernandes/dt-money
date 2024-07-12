@@ -1,6 +1,6 @@
 import { Routes } from './routes/routes'
-import { GlobalStyle } from './shared/appearances/styles/global.style'
 import { Providers } from './shared/contexts/providers'
+import { GlobalStyle } from './shared/styles/global.style'
 
 export function App() {
 	return (

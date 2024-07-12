@@ -1,19 +1,19 @@
-import { Finances } from './components/Finances/template'
-import { Header } from './components/Header/template'
+import { Header } from '../../shared/components/Header/template'
+import { Pagination } from './components/Pagination/template'
 import { Search } from './components/Search/template'
-import { Transactions } from './components/Transactions/template'
+import { Summary } from './components/Summary/template'
 import { Providers } from './contexts/providers'
 import { Container } from './style'
 
 export function Home() {
 	return (
-		<Providers>
-			<Container>
-				<Header />
-				<Finances />
+		<Container>
+			<Header />
+			<Summary />
+			<Providers>
 				<Search />
-				<Transactions />
-			</Container>
-		</Providers>
+				<Pagination />
+			</Providers>
+		</Container>
 	)
 }

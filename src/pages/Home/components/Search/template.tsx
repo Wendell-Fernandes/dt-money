@@ -1,24 +1,33 @@
-import { MagnifyingGlass } from '@phosphor-icons/react'
-import { usePaginationContext } from '../../contexts/Pagination/context'
-import { Button, Container, Input } from './style'
+import { MagnifyingGlass, X } from '@phosphor-icons/react'
+import { useSearch } from './script'
+import { BoxInput, ClearInput, Container, Input, Submit } from './style'
 
 export function Search() {
-	const { changeSearchTransactions, searchTransactions } = usePaginationContext()
+	const { searchTransaction, register, handleSubmit, clearInput, isDisabled } = useSearch()
 
 	return (
-		<Container>
-			<Input
-				placeholder='Busque uma transação'
-				value={searchTransactions}
-				onChange={changeSearchTransactions}
-			/>
-			<Button>
+		<Container onSubmit={handleSubmit(searchTransaction)}>
+			<BoxInput>
+				<Input
+					placeholder='Busque por transações'
+					autoComplete='off'
+					{...register('query')}
+				/>
+				<ClearInput
+					onClick={clearInput}
+					disabled={isDisabled}>
+					<X size={20} />
+				</ClearInput>
+			</BoxInput>
+			<Submit
+				type='submit'
+				disabled={isDisabled}>
 				<MagnifyingGlass
 					size={20}
 					weight='bold'
 				/>
 				Buscar
-			</Button>
+			</Submit>
 		</Container>
 	)
 }

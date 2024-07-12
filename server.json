@@ -1,0 +1,28 @@
+{
+	"transactions": [
+		{
+			"id": "1",
+			"description": "Desenvolvimento de site",
+			"price": 600,
+			"category": "Trabalho",
+			"type": "income",
+			"date": "2024-07-09T19:44:27.094Z"
+		},
+		{
+			"id": "2",
+			"description": "Aluguel da casa",
+			"price": 1000,
+			"category": "Casa",
+			"type": "outcome",
+			"date": "2024-07-10T19:44:27.094Z"
+		},
+		{
+			"id": "3",
+			"description": "Jantar em restaurante",
+			"price": 100,
+			"category": "Alimentação",
+			"type": "outcome",
+			"date": "2024-07-10T19:44:27.094Z"
+		}
+	]
+}
